@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { GeneralInformation } from "./GeneralInformation";
+import { GeneralInformation } from "./resumeComponents/GeneralInformation";
 
 export const ResumePage = () => {
     const [isPageVisible, setIsPageVisible] = useState(false);
@@ -9,13 +9,13 @@ export const ResumePage = () => {
     return (
         <>
             <div>
-                <h1 onClick={togglePageVisibility} className="text-xl text-amber-400 bg-blue-950 p-2 rounded-xl hover:cursor-pointer">Resume</h1>
+                <h1 onClick={togglePageVisibility} className="text-2xl text-amber-400 bg-blue-950 p-2 rounded-xl hover:cursor-pointer">Resume</h1>
             </div>
 
             {isPageVisible && 
                 <div>
                 {/* TODO Upload portrait */}
-                <GeneralInformation />
+                <GeneralInformation location="resume"/>
                 {/* TODO SNS */}
                 {/* TODO Links, ex github?, websites */}
                 {/* TODO Personal information */}
