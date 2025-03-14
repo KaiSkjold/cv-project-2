@@ -18,7 +18,7 @@ export const Recipient = () => {
     };
     return (
         <div>
-            <h1  onClick={toggleVisibility} className="hover:cursor-pointer text-xl text-amber-400 bg-blue-950 p-2 rounded-t-lg border-amber-400">Recipient Information</h1>
+            <h1  onClick={toggleVisibility} className="hover:cursor-pointer text-xl text-amber-400 bg-blue-950 p-2 border-amber-400">Recipient Information</h1>
             
             {/* TODO can I do this in a modal? */}
             <div className={classNames(

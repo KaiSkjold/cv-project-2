@@ -1,22 +1,26 @@
 "use client";
-import { useState } from "react";
+
 import { LetterContent } from "./coverLetterComponents/LetterContent";
 import { Recipient } from "./coverLetterComponents/Recipient";
+import { Button } from "./generalComponents/Button";
 import { GeneralInformation } from "./resumeComponents/GeneralInformation";
 
 export const CoverLetterPage = () => {
-    const [isRecipientVisible, setIsRecipientVisible] = useState(false);
-    const toggleRecipientVisibility = () => setIsRecipientVisible(!isRecipientVisible);
+
     return (
         <>
             <div>
-                <h1 className="text-2xl text-amber-400 bg-blue-950 p-2 rounded-xl hover:cursor-pointer"  onClick={toggleRecipientVisibility}>CoverLetter</h1>
+                <h1 className="text-2xl text-amber-400 bg-blue-950 p-2 rounded-t-lg hover:cursor-pointer">CoverLetter</h1>
             </div>
-           { isRecipientVisible && <div>
+            <div>
                 <Recipient />
                 <LetterContent />
                 <GeneralInformation location="coverLetter"/>
-            </div>}
+            </div>
+            <div>
+                <Button text='Cover the text'/>
+            </div>
+
         </>
     );
 };
